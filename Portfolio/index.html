@@ -11,14 +11,16 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="Images/logo.png" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                <img src="Images/logo4.jpg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>UI/UX Designer</p>
@@ -35,7 +37,7 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quisquam amet minima, saepe consequatur asperiores reiciendis natus eum neque ab soluta labore odio mollitia. Omnis iste laboriosam porro ipsa assumenda.</p>
+                    <p>Innovative and results-driven UX Designer with great interest in design and computer science. Proactive in creating the best user experience by exploring different approaches to solve users' problems. Actively pursuing a new position with the desire to undertake new challenges and make a valuable contribution in design for upcoming disruptive technologies that shape our future.</p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
@@ -72,19 +74,19 @@
                 <div>
                     <i class="fa-solid fa-code"></i>
                     <h2>Web Design</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dolor voluptatum eaque, reiciendis eius hic natus recusandae doloremque repudiandae soluta eos! Cum optio sit quisquam quia vitae aperiam, modi velit.</p>
+                    <p>Planning, conceptualizing, and implementing the plan for designing website in a way that is functional and offers a good user experience.</p>
                     <a href="#">Learn more</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-crop-simple"></i>
                     <h2>UI/UX Design</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dolor voluptatum eaque, reiciendis eius hic natus recusandae doloremque repudiandae soluta eos! Cum optio sit quisquam quia vitae aperiam, modi velit.</p>
+                    <p>Creating of user-friendly and visually appealing interfaces. This also covers the design of websites and application. The visual components and interactive elements contribute to a strong user experience. This all together gives a meaningful, relevant experience for users.</p>
                     <a href="#">Learn more</a>
                 </div>
                 <div>
                     <i class="fa-brands fa-app-store"></i>
                     <h2>App Design</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dolor voluptatum eaque, reiciendis eius hic natus recusandae doloremque repudiandae soluta eos! Cum optio sit quisquam quia vitae aperiam, modi velit.</p>
+                    <p>Designing apps to fulfill the need of entertainment and knowledge for the user with appealing interfaces that is also user-friendly </p>
                     <a href="#">Learn more</a>
                 </div>
             </div>
@@ -96,11 +98,11 @@
             <h1 class="sub-title">My Work</h1>
             <div class="work-list">
                 <div class="work">
-                    <img src="Images/work-1.png">
+                    <img src="Images/web2.jpg">
                     <div class="layer">
-                        <h3>Social Media App</h3>
-                        <p>The app connects you to the talented people around the world.
-                            Download it from Playstore.</p>
+                        <h3>Video streaming website</h3>
+                        <p>The website gives you lot of options of movies and videos to choose from for your entertainment.
+                            Go to the website.</p>
                         <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> 
                     </div>
                 </div>
@@ -108,17 +110,17 @@
                     <img src="Images/work-2.png">
                     <div class="layer">
                         <h3>Music App</h3>
-                        <p>The app connects you to the talented people around the world.
-                            Download it from Playstore.</p>
+                        <p>The app gives you the way to listen to the melodious songs and music from all around the world.
+                            Download it here.</p>
                         <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> 
                     </div>
                 </div>
                 <div class="work">
-                    <img src="Images/work-3.png">
+                    <img src="Images/aimage.jpg">
                     <div class="layer">
-                        <h3>Online Shopping App</h3>
-                        <p>The app connects you to the talented people around the world.
-                            Download it from Playstore.</p>
+                        <h3>AI Image Generator App</h3>
+                        <p>The app gives you AI generated images based on your inputs. Cool way to get closer to AI.
+                            Download it here.</p>
                         <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> 
                     </div>
                 </div>
@@ -143,22 +145,39 @@
                 <a href="Images/kankana_majumder_resume.pdf" download class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
-                <form>
+                <form name="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
-
                 </form>
+                <span id="msg"></span>
             </div>
         </div>
     </div>
+    <div class="copyright">
+        <p>Copyright © Kankana Majumder. Made with <i class="fa-solid fa-heart"></i> Love</p>
+    </div>
 </div>
-
-
-
-
 <script src="code.js"></script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyBtTWcKUJVMJXWt-0_gAOzUfRRDZFKeBFQZXJucnjeBEt7cUzaDD4YkeBBchBdTd01dg/execL'
+    const form = document.forms['submit-to-google-sheet']
+    const msg =document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
 
 </body>
 </html>
