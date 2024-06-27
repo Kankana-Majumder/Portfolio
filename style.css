@@ -16,7 +16,7 @@ body{
 #header{
     height: 100vh;
     width: 100%;
-    background-image: url(./Images/Portfolio/Images/laptopbackground.jpg);
+    background-image: url(Images/laptopbackground.jpg);
     background-size: cover;
     background-position: center;
 }
